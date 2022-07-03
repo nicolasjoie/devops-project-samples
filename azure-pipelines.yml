@@ -44,8 +44,14 @@ stages:
         versionSpec: 3.6 # Functions V2 supports Python 3.6 as of today
 
     - bash: |
-        pwd
-        echo ./
+        cd "/home/vsts/work/1/s"
+        touch requirements.txt
+        $filename = requirements.txt
+        printf "azure-functions==1.0.0b3" >> $filename
+        printf "grpcio==1.14.2" >> $filename
+        printf "grpcio-tools==1.14.2" >> $filename
+        printf "protobuf==3.6.1" >> $filename
+        printf "six==1.12.0 >> $filename
         pip install --target="./.python_packages/lib/site-packages" -r ./requirements.txt
       workingDirectory: $(workingDirectory)
       displayName: 'Install application dependencies'
