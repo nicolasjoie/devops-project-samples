@@ -44,7 +44,7 @@ stages:
         versionSpec: 3.6 # Functions V2 supports Python 3.6 as of today
 
     - bash: |
-        pip install --target="./.python_packages/lib/site-packages" -r ./python/simple/functionApp/Application/requirements.txt
+        pip install --target="./.python_packages/lib/site-packages" -r ./nf-devops-project-samples/python/simple/functionApp/Application/requirements.txt
       workingDirectory: $(workingDirectory)
       displayName: 'Install application dependencies'
 
